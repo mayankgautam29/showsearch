@@ -4,7 +4,7 @@ let spn = document.querySelector("#spn");
 const searchApi = async (data) => {
     try {
         const config = { params: { q: inp.value }};
-        const res = await axios.get(`http://api.tvmaze.com/search/shows?`,config);
+        const res = await axios.get(`https://api.tvmaze.com/search/shows?`,config);
         for(let fr of res.data){
             const finaldata = "\n"+fr.show.name;
             spn.innerText += finaldata;
